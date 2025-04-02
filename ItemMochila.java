@@ -1,25 +1,25 @@
 public class ItemMochila {
-    private double valor;
-    private double peso;  
+    private int valor;
+    private int peso;  
 
-    public ItemMochila(double valor, double peso) {
+    public ItemMochila(int valor, int peso) {
         this.peso = peso;
         this.valor = valor;
     }      
     
-    public double getPeso(){
+    public int getPeso(){
         return peso;
     }
 
-    public void setPeso(double peso) {
+    public void setPeso(int peso) {
         this.peso = peso;
     }
 
-    public double getValor() {
+    public int getValor() {
         return valor;
     }
 
-    public void setValor(double valor) {
+    public void setValor(int valor) {
         this.valor = valor;
     }
 
