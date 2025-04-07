@@ -1,4 +1,3 @@
-
 /* 
     Resolva o problema da mochila conforme o enuciado em sala de aula.
 
@@ -36,6 +35,8 @@ public class Ex3 {
         long startTime;
         long endTime;
 
+        double result;
+
         // Caso de Teste 1
         contIteracoes = 0;
         contInstrucoes = 0;
@@ -55,13 +56,17 @@ public class Ex3 {
         capacidade = 165;
         System.out.println("Result for Case 1: ");
         startTime = System.nanoTime();
-        backpack(itens, capacidade);
+        result = backpack(itens, capacidade);
         endTime = System.nanoTime();
+        System.out.println("Result Value: " + result);
         System.out.println("Time for Case 1: " + (endTime - startTime) + " ns");
         System.out.println("Quantity of iteractions for Case 1: " + contIteracoes);
         System.out.println("Quantity of instructions for Case 1: " + contInstrucoes);
 
         // Caso de Teste 2
+        contIteracoes = 0;
+        contInstrucoes = 0;
+
         itens = new ArrayList<>();
         itens.add(new ItemMochila(50, 56));
         itens.add(new ItemMochila(50, 59));
@@ -73,14 +78,15 @@ public class Ex3 {
         capacidade = 190;
         System.out.println("Result for Case 2: ");
         startTime = System.nanoTime();
-        backpack(itens, capacidade);
+        result = backpack(itens, capacidade);
         endTime = System.nanoTime();
+        System.out.println("Result Value: " + result);
         System.out.println("Time for Case 2: " + (endTime - startTime) + " ns");
         System.out.println("Quantity of iteractions for Case 2: " + contIteracoes);
         System.out.println("Quantity of instructions for Case 2: " + contInstrucoes);
     }
 
-    public static void backpack(List<ItemMochila> itens, int capacidade) {
+    public static double backpack(List<ItemMochila> itens, int capacidade) {
         itens.sort((itemA, itemB) -> Double.compare(
             (itemB.getValor() / itemB.getPeso()),
             (itemA.getValor() / itemA.getPeso()) 
@@ -101,5 +107,7 @@ public class Ex3 {
                 contInstrucoes += 3;
             }
         }
+
+        return pesoAtual;
     }
 }
