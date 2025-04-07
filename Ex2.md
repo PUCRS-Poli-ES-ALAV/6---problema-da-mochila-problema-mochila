@@ -8,6 +8,14 @@
 
 # Tabela de Fibonacci
 
+## Resultados
+
+| Fibonacci | 4 | 8 | 16 | 32 | 128 | 1000 | 10000
+|-|-|-|-|-|-|-|-|
+| Recursivo | X | X | X | X | X | - | - |
+| Iterativo | X | X | X | X | X | X | X |
+| Memoized | X | X | X | X | X | X | X |
+
 ## Iterações
 
 | Fibonacci | 4 | 8 | 16 | 32 | 128 | 1000 | 10000
