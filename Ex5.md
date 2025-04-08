@@ -29,26 +29,26 @@ Blocos selecionados: 1, 2 e 5
 
 | Algoritmo | Caso de Teste 1 | Caso de Teste 2
 |-|-|-|
-| Lista Ordenada | X | X |
-| Matriz de Trabalho | X | X |
+| Lista Ordenada | 309 | 146 |
+| Matriz de Trabalho | 309 | 150 |
 
 ## Iterações
 
 | Algoritmo | Caso de Teste 1 | Caso de Teste 2
 |-|-|-|
-| Lista Ordenada | X | X |
-| Matriz de Trabalho | X | X |
+| Lista Ordenada | 10 | 6 |
+| Matriz de Trabalho | 1837 | 1344 |
 
 ## Instruções
 
 | Algoritmo | Caso de Teste 1 | Caso de Teste 2
 |-|-|-|
-| Lista Ordenada | X | X |
-| Matriz de Trabalho | X | X |
+| Lista Ordenada | 28 | 18 |
+| Matriz de Trabalho | 6629 | 4826 |
 
 ## Tempo (ns)
 
 | Algoritmo | Caso de Teste 1 | Caso de Teste 2
 |-|-|-|
-| Lista Ordenada | X | X |
-| Matriz de Trabalho | X | X |
+| Lista Ordenada | 29783300 | 483400 |
+| Matriz de Trabalho | 1004100 | 221500 |

@@ -108,6 +108,6 @@ public class Ex3 {
             }
         }
 
-        return pesoAtual;
+        return valorAtual;
     }
 }
