@@ -3,8 +3,8 @@
 // teste os dois últimos também para os inteiro 128, 1000 e 10.000.
 
 public class Ex1 {
-    private static int contInstrucoes;
-    private static int contIteracoes;
+    private static long contInstrucoes;
+    private static long contIteracoes;
 
     public static void main(String[] args) {
 
@@ -19,7 +19,7 @@ public class Ex1 {
 
         for(int numero : testCases1){
             long startTime = System.nanoTime();
-            int resultado = fiboRec(numero);
+            long resultado = fiboRec(numero);
             long estimatedTime = System.nanoTime() - startTime;
 
             System.out.println("Result for number "+ numero +": "+ resultado);
@@ -36,7 +36,7 @@ public class Ex1 {
 
         for(int numero : testCases2){
             long startTime = System.nanoTime();
-            int resultado = fibo(numero);
+            long resultado = fibo(numero);
             long estimatedTime = System.nanoTime() - startTime;
 
             System.out.println("Result for number "+ numero +": "+ resultado);
@@ -52,10 +52,10 @@ public class Ex1 {
         System.out.println("------------ memoizedFibo & lookupFibo ------------");
 
         for(int numero : testCases3){
-            int[] f = new int[numero+1];
+            long[] f = new long[(int)(numero + 1)];
 
             long startTime = System.nanoTime();
-            int resultado = memoizedFibo(f, numero);
+            long resultado = memoizedFibo(f, numero);
             long estimatedTime = System.nanoTime() - startTime;
 
             System.out.println("Result for number "+ numero +": "+ resultado);
@@ -69,7 +69,7 @@ public class Ex1 {
         }
     }
 
-    public static int fiboRec(int n){
+    public static long fiboRec(int n){
         contIteracoes++;
 
         contInstrucoes++;
@@ -77,8 +77,8 @@ public class Ex1 {
             contInstrucoes++;
             return n;
         } else {
-            int a = fiboRec(n-1); 
-            int b = fiboRec(n-2);
+            long a = fiboRec(n-1); 
+            long b = fiboRec(n-2);
             contInstrucoes += 2;
 
             contInstrucoes++;
@@ -86,8 +86,9 @@ public class Ex1 {
         }
     }
 
-    public static int fibo(int n){
-        int[] f = new int[n + 1];
+    public static long fibo(int n){
+        long[] f = new long[n + 1];
+
         f[0] = 0;
         f[1] = 1;
         contInstrucoes += 3;
@@ -105,7 +106,7 @@ public class Ex1 {
         return f[n];
     }
 
-    public static int memoizedFibo(int[] f, int n){
+    public static long memoizedFibo(long[] f, int n){
 
         contInstrucoes++; // i = 0
         for(int i = 0; i<=n; i++){
@@ -121,7 +122,7 @@ public class Ex1 {
         return lookupFibo(f, n);
     }
 
-    public static int lookupFibo(int[] f, int n){
+    public static long lookupFibo(long[] f, int n){
         contIteracoes++;
 
         contInstrucoes++;
